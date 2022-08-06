@@ -1,9 +1,24 @@
+import { AutocompleteSelect } from "../components/AutocompleteSelect"
 
 
 export const SearchScreen = () => {
+  const data = [
+    {
+        id: 1,
+        name: 'Universidad de la Veracruz'
+    },
+    {
+        id: 2,
+        name: 'UAZ Siglo XXI'
+    },
+    {
+        id: 3,
+        name: 'Galerias'
+    }, 
+  ]
   return (
     <div>
-        <h1>SearchScreen</h1>
+        <AutocompleteSelect data={ data }/>
     </div>
   )
 }
