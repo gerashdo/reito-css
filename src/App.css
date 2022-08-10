@@ -46,3 +46,31 @@
 .suggestion{
   padding: 5px;
 }
+
+/* inputs */
+
+.input{
+  color: var(--color-black-faded);
+  width: 33rem;
+  height: 1.875rem;
+  padding: 10px 20px;
+  font-weight: var(--font-regular);
+  font-size: var(--font-normal);
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+}
+
+.input:focus{
+  outline: none;
+}
+
+/* Links */
+
+.link {
+  color: var(--color-primary-darker);
+  cursor: pointer;
+}
+
+.link:hover {
+  border-bottom: 0.125rem solid var(--color-primary-darker);
+}

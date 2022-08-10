@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AutocompleteSelect } from "../components/AutocompleteSelect"
 import { Button } from "../components/Button";
+import { SearchContext } from "../context/SearchContext";
 
-const SearchForm = () => {
+export const SearchForm = () => {
+
+    const { nextSection } = useContext( SearchContext );
+
     const data = [
         {
             id: 1,
@@ -19,7 +23,7 @@ const SearchForm = () => {
       ]
     
     const [ inputValue, setInputValue ] = useState("");
-    
+
     return (
         <>
             <div>
@@ -30,10 +34,11 @@ const SearchForm = () => {
                 />
             </div>
             <div>
-                <Button text='Siguiente' />
+                <Button 
+                    text='Siguiente' 
+                    onClickFunction={ () => nextSection() }
+                />
             </div>
         </>
     )
 }
-
-export default SearchForm
