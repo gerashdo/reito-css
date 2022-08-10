@@ -3,6 +3,16 @@
   margin: 0 auto;
 }
 
+/* Container */
+
+.center-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
 /* Navigation */
 
 .primary-navigation{

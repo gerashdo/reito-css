@@ -5,10 +5,9 @@ import './AutocompleteSelect.css'
 
 
 
-export const AutocompleteSelect = ({ data }) => {
+export const AutocompleteSelect = ({ data, inputValue, onValueSelected }) => {
 
     const [ places, setPlaces ] = useState(data);
-    const [ inputValue, setInputValue ] = useState("");
     const [ placeSelected, setPlaceSelected ] = useState({})
 
     const getSuggestions = (value) => {
@@ -48,7 +47,7 @@ export const AutocompleteSelect = ({ data }) => {
     )
 
     const onInputChange = (e, {newValue}) => {
-        setInputValue(newValue)
+        onValueSelected(newValue)
     }
 
     const inputProps = {
